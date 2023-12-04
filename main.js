@@ -69,6 +69,7 @@ do{
     if (productos != 0) {
         alert("Tu monto por ahora es de " + sumaTodo())
         alert("Su precio final es de " + descuentos())
+        break
     }
 }while(productos !== "")
 
