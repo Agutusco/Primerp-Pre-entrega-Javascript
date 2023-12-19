@@ -35,6 +35,15 @@ function dniSeg() {
     return dniSecurity
 }
 
+function sumarDias(fecha, dias){
+    fecha.setDate(fecha.getDate() + dias);
+    return fecha;
+    }
+
+    let d = new Date();
+console.log();
+
+
 let bienvenida = alert("Bienvenido a multifruta, estos son nuestros productos")
 
 let productosElegidos = []
@@ -57,7 +66,7 @@ do{
     
     let mostarProds = productos.map((elm) => ` ${elm.nombre}: $${elm.precio}.
     `)
-    preguntaProds = prompt('¿Que productos quiere?' + mostarProds.join("")).toLowerCase()
+    preguntaProds = prompt('¿Que productos quiere? Atención, solo vendemos por KILO' + mostarProds.join("")).toLowerCase()
     
     if(preguntaProds === ""){
         alert("No seleccionaste ningún producto")
@@ -139,7 +148,6 @@ function verificarNum(str) {
 
 }
 
-
 function descuentos() {
 
 
@@ -147,9 +155,11 @@ function descuentos() {
     if (envio === "si") {
         suma = suma
     }else if(envio === "no"){
+
         let domicilio = prompt("¿Cuál es su domicilio?")
         suma += 300
-        alert("Perfecto, llevaremos su pedido a " + domicilio)
+        alert(`Perfecto, su pedido fue realizado el día ${d}.
+        Enviaremos su pedido a la siguiente ubicación: ${domicilio} el día ${sumarDias(d, +4)}`)
     }
     
         let medioPago = prompt(`¿Cual sera tu medio de pago?
