@@ -3,11 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multifruta</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Coderfy || Página oficial</title>
+    <link rel="shortcut icon" href="../img/favicon-32x32.png">
 </head>
 <body>
-    
-    <h1>Bienvenido</h1>
+    <div class="contenedor-inicio" id="contenedorPrincipal">
+    <div class="form-us">
+        <h3>¡Inicia sesión!</h3>
+        <form id="form-us-sesion">
+            <div class="form-us-container">
+                <div class="form-group">
+                    <label for="nombre">Nombre de usuario</label>
+                    <input type="text" name="nombre" id="nombre">
+                </div>
+                <div class="form-group">
+                    <label for="pass">Contraseña</label>
+                    <input type="password" name="pass" id="pass">
+                </div>
+                <div class="enviar-form">
+                    <button type="submit" id="sesionBtn">Iniciar sesión</button>
+                    <button id="registerBtn">Registrarse</button>
+                </div>
+                <div>
+                    <p id="aviso"></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
     <script src="./main.js"></script>
 </body>
 </html>
