@@ -11,16 +11,16 @@
     <div class="wrapper">
         <aside>
             <div class="info">
-                <h2>Bienvendido a Coderfy</h2>
+                <h2 id="bienvenida"></h2>
                 <div>
                     <p>Bienvenido a Coderfy!! Somos una página web oficial que ofrece música de manera completamente gratuita. En nuestra plataforma no existe la publicidad ni el premium, simplemente tienes que elegir la música que más te guste.</p>
                     <p>Continuamos en fase beta por lo que actualmente contamos con tres generos musicales y 3 canciones que puedes pausar y escuchar cuando vos quieras.</p>
                 </div>
             </div>
             <div class="logo">
-                <h3>Nuestro logo</h3>
-                <img src="../img/logoCoderfy.png" alt="">
-                <p> © Copyright 2024 Coderfy</p>
+                <h3>Artistas más escuchados del 2023</h3>
+                <div class="podium"></div>
+
             </div>
         </aside>
         <section>
@@ -36,7 +36,7 @@
                     <button id="rap">Rap</button>
                 </div>
                 <div class="btnSesion">
-                    <button id="btnSesion"><a href="../index.html">Cerrar sesión</a></button>
+                    <button id="btnSesion">Cerrar sesión</button>
                 </div>
             </div>
         </section>
@@ -73,6 +73,8 @@
     <audio src="../sounds/Baila_-_Alfonso_Lugo.mp3" id="latina1"></audio>
     <!-- ELECTRONICA -->
     <audio src="../sounds/Burnin_Star_-_strangezero.mp3" id="ele1"></audio>
+    <!-- SWEET ALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../music.js"></script>
 </body>
 </html>

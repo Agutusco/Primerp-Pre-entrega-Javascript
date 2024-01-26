@@ -75,3 +75,62 @@ function escuchar(event) {
         latina1.currentTime = 0
     }
 }
+
+
+const btnSesion = document.getElementById("btnSesion")
+btnSesion.addEventListener("click", () =>{
+    Swal.fire({
+        title: "¿Estás seguro que quieres salir?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        confirmButtonText: "black",
+        cancelButtonColor: "#d33",
+        confirmButtonText: `<a href="../index.html"  style="color: white; text-decoration: none;">Si, quiero</a>`
+    })
+})
+
+
+//BIENVENIDA CON NOMBRE
+const bienvenida = document.getElementById("bienvenida")
+const nombre = localStorage.getItem("loggedInUser")
+bienvenida.innerText = `!!Hola ${nombre}!!`
+
+
+
+//PODIO CON FETCH
+const min = 10000;
+const max = 70000;
+
+
+const randomNumbers = Array.from({ length: 3 }, () =>
+  Math.floor(Math.random() * (max - min + 1) + min)
+);
+
+randomNumbers.sort((a, b) => b - a);
+
+
+const apiUrl = "https://jsonplaceholder.typicode.com/users";
+
+fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {
+
+        const users = data;
+
+        const podiumUsers = users.slice(0, 3);
+
+    for (let i = 0; i < podiumUsers.length; i++) {
+    const user = podiumUsers[i];
+    const randomNumber = randomNumbers[i];
+
+        const podiumItem = document.createElement("div");
+        const span = document.createElement("span");
+        podiumItem.classList.add("podium-item");
+        span.classList.add("span-item")
+        podiumItem.textContent = user.name;
+        span.innerText = `${randomNumber} reproducciones`;
+        podiumItem.appendChild(span);
+        document.querySelector(".podium").appendChild(podiumItem);
+    }
+});
