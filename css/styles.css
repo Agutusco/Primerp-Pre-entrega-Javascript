@@ -313,5 +313,16 @@ aside,section{
     width: 100px;
     justify-content: space-between;
 }
+.pausar-boton a{
+    color: black;
+    text-decoration: none;
+}
 
 
+
+.prueba{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+}

@@ -21,8 +21,6 @@ for(let i = 0; i < botones.length; i++){
 
 
 
-
-
 //Musica
 const rock = document.getElementById("btnRock")
 const latina = document.getElementById("btnLatina")
@@ -134,3 +132,8 @@ fetch(apiUrl)
         document.querySelector(".podium").appendChild(podiumItem);
     }
 });
+
+btnSesion.addEventListener('click', () =>{
+    localStorage.removeItem("loggedInUser");
+  currentUser = null;
+})

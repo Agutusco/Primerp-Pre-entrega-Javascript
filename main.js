@@ -19,7 +19,7 @@ function loginExitoso(username) {
     localStorage.setItem("loggedInUser", username)
 
     sesionBtn.addEventListener("click", () =>{
-        location.href = "/pages/inicio.html"
+        location.href = "./pages/inicio.html"
     })
 }
 
@@ -82,7 +82,7 @@ function controlarRegistro() {
             localStorage.setItem("users", JSON.stringify(usersData))
             controlarContrasenia()
             registerBtn.addEventListener("click", () =>{
-                location.href = "/pages/inicio.html"
+                location.href = "./pages/inicio.html"
             })
             if (indicador.length <= 8) {
                 loginExitoso(username)
@@ -103,5 +103,3 @@ document.addEventListener("DOMContentLoaded", () =>{
 })
 
 guardarUsuario()
-
-
